@@ -16,7 +16,7 @@ function downloadImage(url) {
         img.src = url;
         img.classList.add("img-thumbnail", "m-2");
         img.onload = () => resolve(img);
-        img.onerror = () => reject(❌ Failed to load image: ${url});  // Fixed this line
+        img.onerror = () => reject(`❌ Failed to load image: ${url}`);  // Fixed this line
     });
 }
 
